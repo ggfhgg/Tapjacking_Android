@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtRepetionRate"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btnStop"
+            style="@style/btnStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="stopTJService"
+            android:text="@string/strStop" />
+
+    </LinearLayout>
+    <EditText
+        android:id="@+id/edtRepetionRate"
+        style="@style/edtNumberStyle"
+        android:layout_below="@+id/seekLeftOffset"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp"
+        android:ems="10"
+        android:hint="@string/strRepetionRate"
+        android:inputType="number"/>
+
+    <SeekBar
+        android:id="@+id/seekLeftOffset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtRepetionRate"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="50dp"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@drawable/seekbar_custom"
+        android:thumb="@drawable/seekbar_thumb_custom" />
+
+    <TextView
+        android:id="@+id/txtLeftOffset"
+        style="@style/lblStyle"
+        android:layout_below="@+id/seekTopOffset"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/txtTopOffset"
+        style="@style/lblStyle"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="18dp"
+        android:layout_centerHorizontal="true" />
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekTopOffset"
+        android:layout_alignLeft="@+id/seekLeftOffset"
+        android:layout_below="@+id/txtTopOffset"
+        android:layout_marginTop="40dp"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@drawable/seekbar_custom"
+        android:thumb="@drawable/seekbar_thumb_custom"/>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/btnStyle"
+            android:text="premession"
+            />
+
+        <Button
+            android:id="@+id/btnStart"
+            style="@style/btnStyle"
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            android:onClick="startTJService"
+            android:text="@string/strStart"
+            android:alpha="0"/>
+
+
+
+    </FrameLayout>
+
+</RelativeLayout>
