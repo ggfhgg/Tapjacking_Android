@@ -51,4 +51,5 @@ ToastService.java:
         img.setImageResource(R.drawable.ic_terms_message);//加载假的信息提示
         jam.setView(img);
     }
+![image](https://github.com/ggfhgg/Tapjacking_Android/blob/master/Screenshot_20190718-113237_tapjacking_android.jpg)
 
